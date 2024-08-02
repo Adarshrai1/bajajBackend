@@ -4,7 +4,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors(
+   {
+    origin: "https://bajaj-frontend-alpha.vercel.app"
+   }
+));
 
 // Middleware
 app.use(bodyParser.json());
